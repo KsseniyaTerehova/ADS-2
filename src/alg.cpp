@@ -1,9 +1,6 @@
 // Copyright 2022 NNTU-CS
 #include <cstdint>
 #include "alg.h"
-#include <iostream>
-using namespace std;
-
 
 
 double pown(double value, uint16_t n) {
@@ -43,7 +40,4 @@ double cosn(double x, uint16_t count) {
   for (uint64_t i = 2; i <= count; i++)
     R += pown(-1, i - 1) * calcItem(x, 2 * i - 2);
   return R;
-}
-int main() {
-  cout << cosn(2, 6) << endl;
 }
