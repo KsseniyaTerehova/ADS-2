@@ -5,14 +5,14 @@
 
 double pown(double value, uint16_t n) {
   double R = value;
-  for (int i = 2; i <= n; i++)
+  for (uint64_t i = 2; i <= n; i++)
     R *= value;
   return R;
 }
 
 uint64_t fact(uint16_t n) {
-  uint16_t R = 1;
-  for (int i = 2; i <= n; i++)
+  uint64_t R = 1;
+  for (uint64_t i = 2; i <= n; i++)
     R *= i;
   return R;
 }
@@ -23,7 +23,7 @@ double calcItem(double x, uint16_t n) {
 
 double expn(double x, uint16_t count) {
   double R = 1;
-  for (uint16_t i = 1; i <= count; i++)
+  for (uint64_t i = 1; i <= count; i++)
     R += calcItem(x, i);
   return R;
 }
@@ -42,6 +42,3 @@ double cosn(double x, uint16_t count) {
   return R;
 }
 
-int main() {
-  cout << cosn(2, 6) << endl;
-}
