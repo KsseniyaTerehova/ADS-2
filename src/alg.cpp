@@ -41,3 +41,7 @@ double cosn(double x, uint16_t count) {
     R += pown(-1, i - 1) * calcItem(x, 2 * i - 2);
   return R;
 }
+
+int main() {
+  cout << cosn(2, 6) << endl;
+}
